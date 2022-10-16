@@ -9,10 +9,18 @@ const StyledText = styled(Text)
 const Landing = () => {
     return (
        <StyledView tw='bg-blue-bright w-full h-full justify-center items-center'>
-        <StyledText tw='font-bold text-white text-3xl font-extrabold'>Messaging</StyledText>
-        
+        <StyledText tw='font-bold text-white text-4xl font-extrabold'>Messaging</StyledText>
+        <Logo  align="center" /* viewBox='0 0 750 352' *//>
        </StyledView> 
     );
 }
+
+/* const styles = StyleSheet.create({
+    er: {
+      display: 'flex',
+      justifyContent: 'center',
+      alignItems: 'center'
+    }
+}); */
 
 export default Landing;
