@@ -6,6 +6,7 @@ import Logo from '../../assets/logo.svg';
 
 const StyledView = styled(View)
 const StyledText = styled(Text)
+const StyledButton = styled(Button)
 
 const Landing = () => {
     return (
@@ -19,7 +20,12 @@ const Landing = () => {
         </StyledView>
         <StyledText tw='text-white text-xl w-4/6'>connect with your team and friends</StyledText>
         <StyledView tw='mt-16'> 
-          <Button title='Start using' tw='bg-current rounded-lg' />
+          <StyledButton 
+            tw='bg-blue-brilliant text-white font-bold py-2 px-4 rounded-full' 
+            buttonStyle={{ backgroundColor: 'transparent' }}
+          >
+            Start using
+          </StyledButton>
         </StyledView>
       </StyledView> 
     );

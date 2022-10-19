@@ -2,11 +2,13 @@ import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';
 import { withExpoSnack } from 'nativewind';
 import Landing from './src/screens/login/landing';
+import Loading from './src/screens/loading';
 
 function App() {
   return (
     <View style={styles.container}>
-      <Landing /> 
+      {/* <Landing />  */}
+      <Loading />
       <StatusBar style="auto" />
     </View>
   );
