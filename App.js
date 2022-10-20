@@ -11,15 +11,13 @@ const Stack = createNativeStackNavigator()
 
 function App() {
   return (
-    <View style={styles.container}>
       <NavigationContainer>
         <Stack.Navigator initialRouteName="Landing">
-          <Stack.Screen name='Landing' component={Landing}/>
+          {/* <Stack.Screen name='Landing' component={Landing}/> */}
+          <Landing />
           <Stack.Screen name='Login' component={Login}/>
         </Stack.Navigator>
       </NavigationContainer>
-      <StatusBar style="auto" />
-    </View>
   );
 }
 
