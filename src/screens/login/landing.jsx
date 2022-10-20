@@ -8,7 +8,7 @@ const StyledView = styled(View)
 const StyledText = styled(Text)
 const StyledButton = styled(Button)
 
-const Landing = () => {
+const Landing = ({navigation}) => {
     return (
       <StyledView tw='bg-blue-bright w-full h-full justify-center items-center'>
         <StyledText tw='font-bold text-white text-4xl font-extrabold'>Messaging</StyledText>
@@ -23,6 +23,7 @@ const Landing = () => {
           <StyledButton 
             tw='bg-blue-brilliant text-white font-bold py-2 px-4 rounded-full' 
             buttonStyle={{ backgroundColor: 'transparent' }}
+            onPress={() => navigation.navigate('Login')}
           >
             Start using
           </StyledButton>

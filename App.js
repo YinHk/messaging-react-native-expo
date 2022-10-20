@@ -1,14 +1,23 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';
 import { withExpoSnack } from 'nativewind';
+import { NavigationContainer } from '@react-navigation/native';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import Landing from './src/screens/login/landing';
+import Login from './src/screens/login/login';
 import Loading from './src/screens/loading';
+
+const Stack = createNativeStackNavigator()
 
 function App() {
   return (
     <View style={styles.container}>
-      {/* <Landing />  */}
-      <Loading />
+      <NavigationContainer>
+        <Stack.Navigator initialRouteName="Landing">
+          <Stack.Screen name='Landing' component={Landing}/>
+          <Stack.Screen name='Login' component={Login}/>
+        </Stack.Navigator>
+      </NavigationContainer>
       <StatusBar style="auto" />
     </View>
   );
