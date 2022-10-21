@@ -9,25 +9,37 @@ import Loading from './src/screens/loading';
 
 const Stack = createNativeStackNavigator()
 
-function App() {
+const App = () => {
   return (
       <NavigationContainer>
-        <Stack.Navigator initialRouteName="Landing">
-          {/* <Stack.Screen name='Landing' component={Landing}/> */}
-          <Landing />
-          <Stack.Screen name='Login' component={Login}/>
+        <Stack.Navigator 
+          initialRouteName="Landing"
+          screenOptions={{
+            headerBackTitleVisible: false
+          }}
+        >
+          <Stack.Screen name='Landing' options={{ headerShown: false }} component={Landing} />
+          <Stack.Screen 
+            name='Login' 
+            options={{ 
+              headerStyle: { backgroundColor: '#0d6183' },
+              headerTintColor: '#fff',
+              headerTitleStyle: { fontWeight: 'bold' }
+            }}
+            component={Login} 
+          />
         </Stack.Navigator>
       </NavigationContainer>
   );
 }
 
-const styles = StyleSheet.create({
+/* const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: '#fff',
     alignItems: 'center',
     justifyContent: 'center',
   },
-});
+}); */
 
 export default withExpoSnack(App);

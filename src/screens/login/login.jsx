@@ -1,14 +1,20 @@
 import React from 'react';
-import { Text, View } from 'react-native';
+import { Text, View, TextInput } from 'react-native';
+import { Input } from '@rneui/themed';
 import { styled } from 'nativewind';
 
 const StyledView = styled(View)
-const StyledText = styled(Text)
+const StyledInput = styled(TextInput)
 
 const Login = () => {
     return (
         <StyledView>
-          <StyledText>Hello</StyledText>
+          <StyledView>
+            <StyledInput
+              placeholder='email'
+              
+            />
+          </StyledView>
         </StyledView> 
     );
 }
