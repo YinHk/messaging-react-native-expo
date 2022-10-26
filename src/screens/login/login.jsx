@@ -4,16 +4,16 @@ import { Input } from '@rneui/themed';
 import { styled } from 'nativewind';
 
 const StyledView = styled(View)
-const StyledInput = styled(TextInput)
+const StyledInput = styled(Input)
 
 const Login = () => {
     return (
         <StyledView>
           <StyledView>
-            <StyledInput
+            {/* <StyledInput
               placeholder='email'
               
-            />
+            /> */}
           </StyledView>
         </StyledView> 
     );
