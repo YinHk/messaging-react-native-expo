@@ -10,10 +10,12 @@ const Login = () => {
     return (
         <StyledView>
           <StyledView>
-            {/* <StyledInput
+            <StyledInput
               placeholder='email'
-              
-            /> */}
+            />
+            <StyledInput
+              placeholder='password'
+            />
           </StyledView>
         </StyledView> 
     );
